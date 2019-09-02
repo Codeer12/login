@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <title>Login to Games4U</title>
 
- <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
+
 <script>
   // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA8r2vrQaL3f4Jz1Et09RPvJts2xR_sBOg",
-    authDomain: "login-to-games4u.firebaseapp.com",
-    databaseURL: "https://login-to-games4u.firebaseio.com",
-    projectId: "login-to-games4u",
-    storageBucket: "login-to-games4u.appspot.com",
-    messagingSenderId: "152743638512"
-  };
+  var firebaseConfig = {
+    apiKey: "AIzaSyBLSstSS55vITnHV6SI_TanCFGVVlySz-k",
+    authDomain: "carver-middle-school.firebaseapp.com",
+    databaseURL: "https://carver-middle-school.firebaseio.com",
+    projectId: "carver-middle-school",
+    storageBucket: "",
+    messagingSenderId: "837166385427",
+    appId: "1:837166385427:web:65e91c6c6acdc0b4"
   firebase.initializeApp(config);
 </script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
@@ -88,7 +93,10 @@
     <!-- The surrounding HTML is left untouched by FirebaseUI.
          Your app may use that space for branding, controls and other customizations.-->
     <h1>Games4U Login - New!!!</h1>
-    <p id="account-details"></p>
-    <div id="firebaseui-auth-container"></div>
+      <div class="quickstart-user-details-container">
+            Firebase sign-in status: <span id="quickstart-sign-in-status"></span>
+            <div>Firebase auth <code>currentUser</code> object value:</div>
+            <pre><code id="quickstart-account-details">null</code></pre>
+          </div>
   </body>
 </html>
